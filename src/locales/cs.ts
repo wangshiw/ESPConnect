@@ -46,8 +46,8 @@ const cs = {
     emptyState: 'Zde se zobrazí protokoly, jakmile budou zahájeny akce.',
     copySuccess: 'Protokol relace byl zkopírován do schránky.',
     copyError: 'Protokol relace nelze zkopírovat. Zkuste to prosím znovu.',
-    chipMetadata: 'Metadata čipu: pkgVersion={pkgVersion}, chipRevision={chipRevision}',
-    chipId: 'ID čipu: {chipId}',
+    chipMetadata: 'Chip metadata: pkgVersion={pkgVersion}, chipRevision={chipRevision}',
+    chipId: 'Chip ID: {chipId}',
   },
   serialMonitor: {
     title: 'Sériový monitor',
