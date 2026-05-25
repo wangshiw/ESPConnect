@@ -1,4 +1,4 @@
-﻿const tr = {
+const tr = {
   app: {
     title: 'ESPConnect',
     sectionsLabel: 'Bölümler',
@@ -74,6 +74,18 @@
     emptyState: 'Monitör çıktısı başlatıldığında burada görünecektir.',
     copySuccess: 'Seri monitör panoya kopyalandı.',
     copyError: 'Seri monitör çıktısı kopyalanamadı. Lütfen tekrar deneyin.',
+  },
+  serialPortPicker: {
+    title: 'Seri port seç',
+    subtitle: 'ESP cihazınıza bağlı portu seçin.',
+    recommended: 'Önerilen',
+    unknownPort: 'Bilinmeyen port',
+    noDetails: 'Cihaz ayrıntısı yok',
+    usbId: 'USB ID {vendorId}:{productId}',
+    serialNumber: 'Seri {serialNumber}',
+    actions: {
+      select: 'Seç',
+    },
   },
   dialogs: {
     connecting: 'Bağlanıyor',
@@ -221,6 +233,7 @@
     alerts: {
       readingMetadata: 'Uygulama meta verileri okunuyor…',
       noApplications: 'Uygulama bölümü algılanmadı.',
+      partitionTableUnavailable: 'Bölüm tablosu okunamadığı için uygulama bölümleri gösterilemiyor.',
     },
     chips: {
       active: 'Aktif',
@@ -369,6 +382,12 @@
       subtitle: 'Bölüm tablosunu yüklemek için bir ESP32\'ye bağlanın (ESP8266 desteklenmiyor).',
       subtitleConnected: 'Bu ESP32\'de bölüm tablosu algılanmadı.',
     },
+    error: {
+      title: 'Bölüm tablosu okunamadı',
+      message:
+        'ESPConnect bölüm tablosunu okuyamadı. Bu genellikle bu tarayıcıda seri iletişimin güvenilir olmadığı veya çip/taşımanın tam desteklenmediği anlamına gelir.',
+      detail: 'Ayrıntılar: {error}',
+    },
     alerts: {
       unusedFlash: {
         detected: 'Kullanılmayan flaş tespit edildi - yaklaşık {amount} ({bytes} bayt) geri kazanılabilir.',
@@ -480,6 +499,11 @@
     pagesCount: '{count} sayfa',
     namespacesCount: '{count} isim alanı',
     entriesCount: '{count} giriş',
+    usage: {
+      label: 'Kullanılan {used} / {total}',
+      tooltip:
+        'Giriş depolaması: bölümün %{percent} kadarı · yazılı: {written} · silinmiş: {erased} · boş: {free} · geçersiz: {illegal} · giriş kapasitesi: {capacity}',
+    },
     tabs: {
       keys: 'Anahtarlar',
       pages: 'Sayfalar',
@@ -546,6 +570,7 @@
     chinese: '简体中文',
     turkish: 'Türkçe',
     german: 'Almanca',
+    czech: 'Çekçe',
     switchTo: '{language} diline geç',
   },
   theme: {

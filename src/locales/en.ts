@@ -1,4 +1,4 @@
-﻿const en = {
+const en = {
   app: {
     title: 'ESPConnect',
     sectionsLabel: 'Sections',
@@ -74,6 +74,18 @@
     emptyState: 'Monitor output will appear here once started.',
     copySuccess: 'Serial monitor copied to clipboard.',
     copyError: 'Unable to copy serial monitor output. Please try again.',
+  },
+  serialPortPicker: {
+    title: 'Select serial port',
+    subtitle: 'Choose the port connected to your ESP device.',
+    recommended: 'Recommended',
+    unknownPort: 'Unknown port',
+    noDetails: 'No device details available',
+    usbId: 'USB ID {vendorId}:{productId}',
+    serialNumber: 'Serial {serialNumber}',
+    actions: {
+      select: 'Select',
+    },
   },
   dialogs: {
     connecting: 'Connecting',
@@ -221,6 +233,7 @@
     alerts: {
       readingMetadata: 'Reading application metadata…',
       noApplications: 'No application partitions detected.',
+      partitionTableUnavailable: 'Application partitions cannot be shown because the partition table could not be read.',
     },
     chips: {
       active: 'Active',
@@ -369,6 +382,12 @@
       subtitle: 'Connect to an ESP32 to load its partition table (ESP8266 not supported).',
       subtitleConnected: 'No partition table detected on this ESP32.',
     },
+    error: {
+      title: 'Partition table could not be read',
+      message:
+        'ESPConnect could not read the partition table. This usually means serial communication is unreliable in this browser or the chip/transport is not fully supported.',
+      detail: 'Details: {error}',
+    },
     alerts: {
       unusedFlash: {
         detected: 'Unused flash detected - about {amount} ({bytes} bytes) is reclaimable.',
@@ -480,6 +499,11 @@
     pagesCount: '{count} pages',
     namespacesCount: '{count} namespaces',
     entriesCount: '{count} entries',
+    usage: {
+      label: 'Used {used} / {total}',
+      tooltip:
+        'Entry storage: {percent}% of partition · written: {written} · erased: {erased} · free: {free} · illegal: {illegal} · entry capacity: {capacity}',
+    },
     tabs: {
       keys: 'Keys',
       pages: 'Pages',
@@ -547,6 +571,7 @@
     chinese: '简体中文',
     turkish: 'Türkçe',
     german: 'German',
+    czech: 'Czech',
     switchTo: 'Switch to {language}',
   },
   theme: {

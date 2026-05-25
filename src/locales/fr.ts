@@ -1,4 +1,4 @@
-﻿const fr = {
+const fr = {
   app: {
     title: 'ESPConnect',
     sectionsLabel: 'Sections',
@@ -74,6 +74,18 @@
     emptyState: 'Le moniteur apparaîtra ici lorsqu`il sera démarré.',
     copySuccess: 'Moniteur serie copie dans le presse-papier.',
     copyError: 'Impossible de copier la sortie du moniteur. Veuillez reessayer.',
+  },
+  serialPortPicker: {
+    title: 'Sélectionner le port série',
+    subtitle: 'Choisissez le port connecté à votre appareil ESP.',
+    recommended: 'Recommandé',
+    unknownPort: 'Port inconnu',
+    noDetails: 'Aucun détail disponible',
+    usbId: 'USB ID {vendorId}:{productId}',
+    serialNumber: 'Série {serialNumber}',
+    actions: {
+      select: 'Sélectionner',
+    },
   },
   dialogs: {
     connecting: 'Connexion en cours',
@@ -221,6 +233,7 @@
     alerts: {
       readingMetadata: 'Lecture des meta-données du fichier…',
       noApplications: 'Aucun application de partitionnement trouvée.',
+      partitionTableUnavailable: 'Les partitions d’application ne peuvent pas être affichées car la table de partitions n’a pas pu être lue.',
     },
     chips: {
       active: 'Activé',
@@ -369,6 +382,12 @@
       subtitle: 'Connctez un ESP32 afin d`en lire la table de partition (fonction non disponible pour la famille ESP8266).',
       subtitleConnected: 'Aucune table de partitions détectée sur cet ESP32.',
     },
+    error: {
+      title: 'Impossible de lire la table de partitions',
+      message:
+        'ESPConnect n’a pas pu lire la table de partitions. Cela indique généralement une communication série peu fiable dans ce navigateur, ou une puce/un transport qui n’est pas entièrement pris en charge.',
+      detail: 'Détails : {error}',
+    },
     alerts: {
       unusedFlash: {
         detected: 'Mémoire Flash inutilisée - environ {amount}({bytes} octets)）pouvant être utilisés',
@@ -480,6 +499,11 @@
     pagesCount: '{count} pages',
     namespacesCount: '{count} espaces',
     entriesCount: '{count} entrées',
+    usage: {
+      label: 'Utilisé {used} / {total}',
+      tooltip:
+        'Stockage des entrées : {percent}% de la partition · écrit : {written} · effacé : {erased} · libre : {free} · illégal : {illegal} · capacité des entrées : {capacity}',
+    },
     tabs: {
       keys: 'Keys',
       pages: 'Pages',
@@ -547,6 +571,7 @@
     chinese: '简体中文',
     turkish: 'Türkçe',
     german: 'Allemand',
+    czech: 'Tchèque',
     switchTo: 'Passer à {language}',
   },
   theme: {

@@ -1,4 +1,4 @@
-﻿const zh = {
+const zh = {
   app: {
     title: 'ESPConnect',
     sectionsLabel: '板块',
@@ -62,6 +62,18 @@
     emptyState: '启动后，监视器输出会显示在此处。',
     copySuccess: '串口监视器信息已复制到剪贴板。',
     copyError: '无法复制串口监视器输出。请重试。',
+  },
+  serialPortPicker: {
+    title: '选择串口',
+    subtitle: '选择连接到 ESP 设备的端口。',
+    recommended: '推荐',
+    unknownPort: '未知端口',
+    noDetails: '没有可用的设备详情',
+    usbId: 'USB ID {vendorId}:{productId}',
+    serialNumber: '序列号 {serialNumber}',
+    actions: {
+      select: '选择',
+    },
   },
   sessionLog: {
     title: '会话日志',
@@ -220,6 +232,7 @@
     alerts: {
       readingMetadata: '正在读取应用程序元数据…',
       noApplications: '未检测到应用分区。',
+      partitionTableUnavailable: '无法显示应用分区，因为分区表读取失败。',
     },
     chips: {
       active: '激活',
@@ -367,6 +380,12 @@
       subtitle: '连接 ESP32 以加载其分区表（ESP8266 不受支持）。',
       subtitleConnected: '未检测到此 ESP32 的分区表。',
     },
+    error: {
+      title: '无法读取分区表',
+      message:
+        'ESPConnect 无法读取分区表。这通常表示此浏览器中的串口通信不可靠，或芯片/传输方式未完全受支持。',
+      detail: '详细信息：{error}',
+    },
     alerts: {
       unusedFlash: {
         detected: '检测到未使用的闪存 - 大约 {amount}（{bytes} 字节）可回收。',
@@ -478,6 +497,11 @@
     pagesCount: '{count} 页',
     namespacesCount: '{count} 命名空间',
     entriesCount: '{count} 条目',
+    usage: {
+      label: '已用 {used} / {total}',
+      tooltip:
+        '条目存储：占分区 {percent}% · 已写入：{written} · 已擦除：{erased} · 空闲：{free} · 非法：{illegal} · 条目容量：{capacity}',
+    },
     tabs: {
       keys: '键',
       pages: '页面',
@@ -545,6 +569,7 @@
     chinese: '中文',
     turkish: '土耳其语',
     german: '德语',
+    czech: '捷克语',
     switchTo: '切换到{language}',
   },
   theme: {

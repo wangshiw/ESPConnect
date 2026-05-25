@@ -75,6 +75,18 @@ const de = {
     copySuccess: 'Serieller Monitor in die Zwischenablage kopiert.',
     copyError: 'Ausgabe des seriellen Monitors konnte nicht kopiert werden. Bitte versuche es erneut.',
   },
+  serialPortPicker: {
+    title: 'Seriellen Port auswählen',
+    subtitle: 'Wähle den Port, der mit deinem ESP-Gerät verbunden ist.',
+    recommended: 'Empfohlen',
+    unknownPort: 'Unbekannter Port',
+    noDetails: 'Keine Gerätedetails verfügbar',
+    usbId: 'USB ID {vendorId}:{productId}',
+    serialNumber: 'Seriennummer {serialNumber}',
+    actions: {
+      select: 'Auswählen',
+    },
+  },
   dialogs: {
     connecting: 'Verbinde',
     littlefsBackup: 'LittleFS-Backup',
@@ -221,6 +233,7 @@ const de = {
     alerts: {
       readingMetadata: 'Anwendungsmetadaten werden gelesen…',
       noApplications: 'Keine Anwendungspartitionen erkannt.',
+      partitionTableUnavailable: 'Anwendungspartitionen können nicht angezeigt werden, weil die Partitionstabelle nicht gelesen werden konnte.',
     },
     chips: {
       active: 'Aktiv',
@@ -369,6 +382,12 @@ const de = {
       subtitle: 'Verbinde ein ESP32, um die Partitionstabelle zu laden (ESP8266 wird nicht unterstützt).',
       subtitleConnected: 'Keine Partitionstabelle auf diesem ESP32 erkannt.',
     },
+    error: {
+      title: 'Partitionstabelle konnte nicht gelesen werden',
+      message:
+        'ESPConnect konnte die Partitionstabelle nicht lesen. Das weist meistens auf eine unzuverlässige serielle Kommunikation in diesem Browser oder einen nicht vollständig unterstützten Chip/Transport hin.',
+      detail: 'Details: {error}',
+    },
     alerts: {
       unusedFlash: {
         detected: 'Ungenutzter Flash erkannt - etwa {amount} ({bytes} Bytes) sind freigebbar.',
@@ -480,6 +499,11 @@ const de = {
     pagesCount: '{count} Seiten',
     namespacesCount: '{count} Namespaces',
     entriesCount: '{count} Einträge',
+    usage: {
+      label: 'Belegt {used} / {total}',
+      tooltip:
+        'Eintragsspeicher: {percent}% der Partition · geschrieben: {written} · gelöscht: {erased} · frei: {free} · ungültig: {illegal} · Eintragskapazität: {capacity}',
+    },
     tabs: {
       keys: 'Schlüssel',
       pages: 'Seiten',
@@ -547,6 +571,7 @@ const de = {
     chinese: 'Chinesisch',
     turkish: 'Türkisch',
     german: 'Deutsch',
+    czech: 'Tschechisch',
     switchTo: 'Zu {language} wechseln',
   },
   theme: {
